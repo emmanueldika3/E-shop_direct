@@ -8,13 +8,15 @@ import { commandes } from './pages/admin/commandes/commandes';
 import { Checkout } from './pages/checkout/checkout';
 import { Home } from './pages/home/home';
 
-// Importations des composants de catégories
+// Importations des composants de menu
 import { News } from './pages/news/news';
 import { Tech } from './pages/tech/tech';
 import { Phones } from './pages/phones/phones';
 import { Accessories } from './pages/accessories/accessories';
 import { Gaming } from './pages/gaming/gaming';
 import { Promo } from './pages/promo/promo';
+import { Login } from './pages/login/login';
+import { Register } from './user/register/register';
 
 export const routes: Routes = [
     {
@@ -36,7 +38,9 @@ export const routes: Routes = [
             { path: 'gaming', component: Gaming },
             { path: 'promotions', component: Promo },
             { path: 'checkout', component: Checkout },
-            { path: 'home', component: Home }
+            { path: 'home', component: Home },
+            { path: 'login', component: Login },
+            { path: 'register', component: Register }
         ]
     },
     {

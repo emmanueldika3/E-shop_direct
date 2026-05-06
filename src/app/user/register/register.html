@@ -1,0 +1,61 @@
+<div class="min-h-screen flex items-center justify-center bg-[#f8fafc] relative overflow-hidden px-6 py-12">
+  
+  <!-- Background Decor -->
+  <div class="absolute inset-0 z-0 opacity-40" 
+       style="background-image: linear-gradient(#e2e8f0 1.5px, transparent 1.5px), linear-gradient(90deg, #e2e8f0 1.5px, transparent 1.5px); background-size: 60px 60px;">
+  </div>
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-100/50 rounded-full blur-[100px]"></div>
+
+  <div class="max-w-lg w-full bg-white rounded-[2.5rem] p-10 md:p-14 shadow-[0_40px_80px_-15px_rgba(15,23,42,0.1)] relative z-10 border border-slate-100">
+    
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-black text-slate-900 tracking-tighter">Créer un <span class="text-indigo-500 italic">compte</span></h2>
+      <p class="text-slate-400 mt-2 font-medium">Rejoignez la communauté e-shop direct</p>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" class="grid grid-cols-1 gap-5">
+      
+      <!-- Nom Complet -->
+      <div class="space-y-1">
+        <label class="ml-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Nom Complet</label>
+        <input type="text" name="name" [(ngModel)]="registerData.name" required
+               placeholder="votre nom complet"
+               class="w-full px-8 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 transition-all outline-none text-slate-900 font-semibold">
+      </div>
+
+      <!-- Email -->
+      <div class="space-y-1">
+        <label class="ml-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Votre Email</label>
+        <input type="email" name="email" [(ngModel)]="registerData.email" required
+               placeholder="client@eshop.com"
+               class="w-full px-8 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 transition-all outline-none text-slate-900 font-semibold">
+      </div>
+
+      <!-- Mot de passe et Confirmation -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="space-y-1">
+          <label class="ml-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Mot de passe</label>
+          <input type="password" name="password" [(ngModel)]="registerData.password" required
+                 placeholder="votre password"
+                 class="w-full px-8 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 transition-all outline-none text-slate-900 font-semibold">
+        </div>
+        <div class="space-y-1">
+          <label class="ml-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Confirmer</label>
+          <input type="password" name="password_confirmation" [(ngModel)]="registerData.password_confirmation" required
+                 placeholder="confirmez..."
+                 class="w-full px-8 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 transition-all outline-none text-slate-900 font-semibold">
+        </div>
+      </div>
+
+      <button type="submit" 
+              class="w-full py-5 bg-slate-900 text-white rounded-2xl font-bold hover:bg-indigo-600 transition-all shadow-2xl shadow-orange-100 active:scale-95 text-lg mt-4">
+        S'inscrire maintenant
+      </button>
+    </form>
+
+    <p class="mt-8 text-center text-slate-400 text-sm">
+      Déjà membre ? 
+      <a routerLink="/login" class="text-indigo-600 font-black hover:text-black transition-colors ml-1">Connectez-vous</a>
+    </p>
+  </div>
+</div>
