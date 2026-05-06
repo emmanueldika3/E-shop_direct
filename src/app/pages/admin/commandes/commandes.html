@@ -1,0 +1,84 @@
+<div class="p-6 bg-gray-50 min-h-screen font-sans">
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-800">Gestion des Commandes</h1>
+      <p class="text-sm text-gray-500">Suivi et mise à jour des ventes en temps réel</p>
+    </div>
+    <div class="flex gap-2">
+      <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg shadow transition flex items-center">
+        <span class="mr-2">+</span> Nouvelle Commande
+      </button>
+      <button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition">
+        Exporter (CSV)
+      </button>
+    </div>
+  </div>
+
+  <div class="bg-white p-4 rounded-xl shadow-sm mb-6 flex flex-wrap gap-4 items-center justify-between">
+    <div class="flex gap-4 overflow-x-auto pb-2 md:pb-0">
+      <button class="px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm">Toutes</button>
+      <button class="px-4 py-1.5 rounded-full text-gray-500 hover:bg-gray-100 text-sm">En attente</button>
+      <button class="px-4 py-1.5 rounded-full text-gray-500 hover:bg-gray-100 text-sm">Livrées</button>
+    </div>
+    <div class="relative w-full md:w-72">
+      <input type="text" placeholder="Rechercher une commande..." 
+             class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm">
+      <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="bg-gray-50 border-b border-gray-100">
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase">ID</th>
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase">Client</th>
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase">Produit</th>
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase">Date</th>
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase">Montant</th>
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase">Statut</th>
+          <th class="px-6 py-4 text-xs font-bold text-gray-400 uppercase text-right">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-50">
+        <tr class="hover:bg-blue-50/30 transition">
+          <td class="px-6 py-4 font-medium text-indigo-600">#ORD-2026-001</td>
+          <td class="px-6 py-4">
+            <div class="flex items-center">
+              <div class="h-8 w-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-xs mr-3">SP</div>
+              <span class="text-sm font-semibold text-gray-700">Simon Pierre</span>
+            </div>
+          </td>
+          <td class="px-6 py-4 text-sm text-gray-600">Maillot Real Madrid (L)</td>
+          <td class="px-6 py-4 text-sm text-gray-500">01 Avr 2026</td>
+          <td class="px-6 py-4 font-bold text-gray-800">89.99 €</td>
+          <td class="px-6 py-4">
+            <span class="px-3 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">Livrée</span>
+          </td>
+          <td class="px-6 py-4 text-right">
+            <button class="text-gray-400 hover:text-indigo-600 px-2">Voir</button>
+          </td>
+        </tr>
+
+        <tr class="hover:bg-blue-50/30 transition">
+          <td class="px-6 py-4 font-medium text-indigo-600">#ORD-2026-002</td>
+          <td class="px-6 py-4">
+            <div class="flex items-center">
+              <div class="h-8 w-8 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center font-bold text-xs mr-3">JD</div>
+              <span class="text-sm font-semibold text-gray-700">Jeudi Foot</span>
+            </div>
+          </td>
+          <td class="px-6 py-4 text-sm text-gray-600">Clavier Rétroéclairé RGB</td>
+          <td class="px-6 py-4 text-sm text-gray-500">01 Avr 2026</td>
+          <td class="px-6 py-4 font-bold text-gray-800">55.00 €</td>
+          <td class="px-6 py-4">
+            <span class="px-3 py-1 text-xs font-medium bg-yellow-100 text-yellow-700 rounded-full">En attente</span>
+          </td>
+          <td class="px-6 py-4 text-right">
+            <button class="text-gray-400 hover:text-indigo-600 px-2">Voir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="p-8 bg-gray-300 mx-auto px-4 py-8 min-h-screen">
+  <header class="flex items-center justify-between mb-8">
+    <div>
+        <h1 class="text-3xl font-black text-gray-900 mb-2">Accessoires & <span class="text-indigo-600">Objets Connectés</span></h1>
+    <p class="text-sm text-gray-500 font-medium">Complétez votre expérience mobile avec nos meilleurs gadgets.</p>
+    </div>
+    <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full">
+      {{ products.length }} Articles
+    </span>
+  </header>
+
+  <div class="product-grid">
+    <app-product-card 
+      *ngFor="let item of products" 
+      [product]="item">
+    </app-product-card>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="flex flex-row">
+  <!-- <aside class="w-62.5 h-screen bg-purple-600 text-white
+   flex flex-col justify-between">
+    <div>
+      <div class="h-20 flex items-center justify-center">
+        <h1>Logo</h1>
+      </div>
+      <ul class="flex flex-col gap-4 p-4 *:cursor-pointer">
+        <li><a routerLink="/admin/dashboard">Dashboard</a></li>
+        <li><a routerLink="/admin/products">Products</a></li>
+        <li><a routerLink="/admin/users">Users</a></li>
+      </ul>
+    </div>
+    <div class="self-center">
+      <button type="button" class="cursor-pointer" (click)="logout($event)">Logout</button>
+    </div>
+  </aside> -->
+  <aside class="w-64 bg-indigo-900 text-white flex-shrink-0 hidden md:block">
+    <div class="p-6 text-2xl font-bold border-b border-indigo-800">
+      AdminPanel
+    </div>
+    <nav class="mt-6">
+      <a href="/admin/dashboard" class="flex items-center py-3 px-6 bg-indigo-800 text-white">
+        <span class="mx-3">Tableau de bord</span>
+      </a>
+      <a href="/admin/products" class="flex items-center py-3 px-6 text-gray-400 hover:bg-indigo-800 hover:text-white transition">
+        <span class="mx-3">Produits / Stocks</span>
+      </a>
+      <a href="/admin/users" class="flex items-center py-3 px-6 text-gray-400 hover:bg-indigo-800 hover:text-white transition">
+        <span class="mx-3">Commandes</span>
+      </a>
+      <a href="#" class="flex items-center py-3 px-6 text-gray-400 hover:bg-indigo-800 hover:text-white transition">
+        <span class="mx-3">Paramètres</span>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="flex-1">
+    <header class="h-10 bg-gray-500">header</header>
+    <main class="min-h-[calc(100vh-60px)]">
+      <router-outlet />
+    </main>
+    <footer class="h-5 bg-gray-500">footer</footer>
+  </div>
+</div>

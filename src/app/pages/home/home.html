@@ -1,0 +1,159 @@
+<div class="min-h-screen bg-white text-slate-900 font-sans">
+  
+  <!-- HERO SECTION : CLARTÉ & ESPACE -->
+  <header class="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="animate-in fade-in slide-in-from-bottom-8 duration-1000">
+        <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-8 leading-[0.9]">
+          Le Futur est <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Lumineux.</span>
+        </h1>
+        <p class="text-xl text-slate-500 max-w-lg mb-10 leading-relaxed">
+          Découvrez une sélection rigoureuse des dernières innovations. Performance brute, design minimaliste. 
+          Disponible maintenant à <strong>Douala</strong>.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-blue-600 transition-all shadow-xl shadow-blue-100 active:scale-95">
+            Voir le catalogue
+          </button>
+          <button class="px-10 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-bold hover:bg-slate-50 transition-all">
+            Nos services
+          </button>
+        </div>
+      </div>
+
+      <!-- Image Produit Épurée -->
+      <div class="relative animate-in zoom-in duration-1000 delay-200">
+        <div class="absolute inset-0 bg-blue-400/10 rounded-full blur-3xl transform scale-75"></div>
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" 
+             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+      </div>
+    </div>
+  </header>
+
+  
+
+  <!-- GRILLE DE PRODUITS : CARTES "GLASS" -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+  <div class="flex items-end justify-between mb-16">
+    <div>
+      <span class="text-blue-600 font-black text-xs uppercase tracking-widest italic">Sélection Expert</span>
+      <h2 class="text-5xl font-black mt-2 tracking-tighter">LES DERNIERS <span class="text-blue-600">DROPS.</span></h2>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    @for(product of products; track product.name) {
+    <div class="group bg-white rounded-[2.5rem] p-6 border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+      
+      <!-- Container Image avec Badge Dynamique -->
+      <div class="relative aspect-[4/5] mb-8 overflow-hidden rounded-[2rem] bg-slate-50">
+        <span class="absolute top-5 left-5 z-10 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-tighter shadow-sm">
+          {{ product.badge }}
+        </span>
+        
+        <img [src]="product.image" 
+             [alt]="product.name"
+             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+        
+        <!-- Overlay d'achat rapide au survol -->
+        <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+             <button class="bg-white text-slate-900 px-6 py-3 rounded-full font-bold text-sm shadow-xl transform translate-y-10 group-hover:translate-y-0 transition-transform">
+               Aperçu rapide
+             </button>
+        </div>
+      </div>
+
+      <!-- Infos Produits -->
+      <div class="px-2">
+        <p class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-1">{{ product.category }}</p>
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">{{ product.name }}</h3>
+        
+        <div class="flex items-center justify-between border-t border-slate-50 pt-6">
+          <div>
+            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Prix</p>
+            <p class="text-2xl font-black text-slate-900">{{ product.price }} <span class="text-xs font-medium">FCFA</span></p>
+          </div>
+          
+          <button class="h-14 w-14 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all active:scale-90">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>
+
+<section class="bg-slate-50 py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <div class="flex flex-col items-center text-center p-8 bg-white rounded-[2.5rem] shadow-sm">
+        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Garantie 12 Mois</h4>
+        <p class="text-slate-500 text-sm">Tous nos produits sont certifiés originaux avec un SAV local réactif.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-8 bg-white rounded-[2.5rem] shadow-sm">
+        <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Livraison Partout</h4>
+        <p class="text-slate-500 text-sm">De PK10 à Bonanjo, recevez votre commande en moins de 2h à Douala.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-8 bg-white rounded-[2.5rem] shadow-sm">
+        <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Support 24/7</h4>
+        <p class="text-slate-500 text-sm">Une question technique ? Nos experts vous répondent sur WhatsApp.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- POP-UP PUBLICITAIRE : MINIMALISTE -->
+  @if (showAd()) {
+  <div class="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-md animate-in fade-in duration-500">
+    <div class="bg-white rounded-[3rem] shadow-2xl max-w-lg w-full p-12 relative animate-in zoom-in slide-in-from-bottom-4 duration-500">
+      <button (click)="closeAd()" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-8 transform -rotate-12">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold mb-4">Vente Privée</h3>
+        <p class="text-slate-500 mb-10 leading-relaxed">
+          Inscrivez-vous pour accéder à nos tarifs préférentiels sur le matériel informatique.
+        </p>
+        <div class="space-y-4">
+          <input type="email" placeholder="Votre adresse email" 
+                 class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 transition-all outline-none">
+          <button class="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all">
+            Rejoindre la liste
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

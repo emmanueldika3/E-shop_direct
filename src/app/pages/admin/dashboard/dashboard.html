@@ -1,0 +1,108 @@
+<div>
+  <!-- <section>
+    <h1>{{ pageName }}</h1>
+    <img [src]="imageUrl" alt="" width="300" />
+
+    <div class="w-14 h-14 bg-red-600"  
+    [class.box]="isEnabled" 
+    [class.box2]="!isEnabled"
+    ></div>
+
+    <div class="w-14 h-14 bg-red-600" [ngClass]="getClasses()"></div>
+  </section> -->
+
+  <!-- <section class="bg-red-600 p-4">
+    <app-counter (changeCounter)="getCount($event)" />
+    <h1 class="text-white">{{ count }}</h1>
+  </section>
+
+  <app-button>Save</app-button>
+  <app-button>Edit</app-button>
+  <app-button><span>Delete</span></app-button> -->
+</div>
+<div class="flex h-screen bg-gray-100 font-sans">
+   <!-- <aside class="w-64 bg-indigo-900 text-white flex-shrink-0 hidden md:block">
+    <div class="p-6 text-2xl font-bold border-b border-indigo-800">
+      AdminPanel
+    </div>
+    <nav class="mt-6">
+      <a href="/admin/dashboard" class="flex items-center py-3 px-6 bg-indigo-800 text-white">
+        <span class="mx-3">Tableau de bord</span>
+      </a>
+      <a href="/admin/products" class="flex items-center py-3 px-6 text-gray-400 hover:bg-indigo-800 hover:text-white transition">
+        <span class="mx-3">Produits / Stocks</span>
+      </a>
+      <a href="/admin/users" class="flex items-center py-3 px-6 text-gray-400 hover:bg-indigo-800 hover:text-white transition">
+        <span class="mx-3">Commandes</span>
+      </a>
+      <a href="#" class="flex items-center py-3 px-6 text-gray-400 hover:bg-indigo-800 hover:text-white transition">
+        <span class="mx-3">Paramètres</span>
+      </a>
+    </nav>
+  </aside> -->
+
+  <main class="flex-1 flex flex-col overflow-hidden">
+    <header class="flex justify-between items-center py-4 px-6 bg-white border-b bg-blue-50">
+      <div class="relative w-64">
+        <input class="w-full border-none bg-gray-100 rounded-md py-2 px-4 focus:ring-2 focus:ring-indigo-500" type="text" placeholder="Rechercher...">
+      </div>
+      <div class="flex items-center">
+        <div class="mr-4 text-gray-600 font-medium">Full-Stack Dev</div>
+        <img class="h-10 w-10 rounded-full object-cover border-2 border-indigo-500" src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff" alt="Avatar">
+      </div>
+    </header>
+
+    <section class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">Vue d'ensemble</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-indigo-500">
+          <p class="text-sm text-gray-500 uppercase font-bold">Ventes totales</p>
+          <p class="text-2xl font-semibold text-gray-800">12,850 €</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+          <p class="text-sm text-gray-500 uppercase font-bold">Articles en stock</p>
+          <p class="text-2xl font-semibold text-gray-800">452</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-500">
+          <p class="text-sm text-gray-500 uppercase font-bold">Nouvelles commandes</p>
+          <p class="text-2xl font-semibold text-gray-800">24</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-red-500">
+          <p class="text-sm text-gray-500 uppercase font-bold">Alertes rupture</p>
+          <p class="text-2xl font-semibold text-gray-800 text-red-600">3</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-100 font-bold text-gray-700">
+          Derniers produits ajoutés
+        </div>
+        <table class="w-full text-left">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase">Image</th>
+              <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase">Désignation</th>
+              <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase">Catégorie</th>
+              <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase">Prix</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr>
+              <td class="px-6 py-4"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Jersey_Real_Madrid.png" class="h-10 w-10 object-contain"></td>
+              <td class="px-6 py-4 font-medium">Maillot Real Madrid</td>
+              <td class="px-6 py-4">Sport</td>
+              <td class="px-6 py-4">89.99 €</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4"><img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=100&auto=format&fit=crop" class="h-10 w-10 object-cover rounded"></td>
+              <td class="px-6 py-4 font-medium">Clavier Rétroéclairé</td>
+              <td class="px-6 py-4">Informatique</td>
+              <td class="px-6 py-4">55.00 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>

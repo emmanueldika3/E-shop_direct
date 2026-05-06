@@ -1,0 +1,21 @@
+/* Le conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* La grille de produits */
+.product-grid {
+  display: grid;
+  /* Crée autant de colonnes de 280px que possible */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px; /* Espace entre les cartes */
+  justify-content: center;
+}
+
+/* CRUCIAL : Force le composant Angular à se comporter comme un bloc de grille */
+app-product-card {
+  display: block;
+  height: 100%;
+}
